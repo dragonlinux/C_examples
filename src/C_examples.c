@@ -13,6 +13,6 @@
 
 int main(void)
 {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	puts("生成随机数"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }
