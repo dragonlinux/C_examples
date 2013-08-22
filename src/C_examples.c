@@ -1,18 +1,27 @@
 /*
  ============================================================================
- Name        : C_examples.c
+ Name        : C_ecamples.c
  Author      : 叶玉龙
- Version     :
  Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : 生成10个100以内的随机数，所生成的随机数都只能是一次性的，如果你第二次运行的时候输出结果仍和第一次一样。
+ 如果你要随机生成一个在一定范围的数，
+ 你可以在宏定义中定义一个random(int number)函数，
+ 然后在main()里面直接调用random()函数：
+ 不足之处：所生成的随机数都只能是一次性的，如果你第二次运行的时候输出结果仍和第一次一样。
+ 这与srand()函数有关。srand()用来设置rand()产生随机数时的随机数种子。
+ 在调用rand()函数产生随机数前，必须先利用srand()设好随机数种子（seed）, 如果未设随机数种子, rand()在调用时会自动设随机数种子为1。
+ 这个例子就是因为没有设置随机数种子，每次随机数种子都自动设成相同值1 ，进而导致rand()所产生的随机数值都一样。
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
+#define random(x) (rand()%x)
 
 int main(void)
 {
-	puts("生成随机数"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+	int x;
+	for (x = 0; x < 10; x++)
+		printf("%d\n", random(100));
+	return 0;
 }
