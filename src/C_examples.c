@@ -4,7 +4,7 @@
  Author      : 叶玉龙
  Version     :
  Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : sizeof examples
  ============================================================================
  */
 
@@ -13,6 +13,6 @@
 
 int main(void)
 {
-	puts("生成随机数"); /* prints !!!Hello World!!! */
+	puts("sizeof examples"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }
